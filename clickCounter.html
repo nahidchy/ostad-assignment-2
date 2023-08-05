@@ -9,6 +9,24 @@
     <h1>Button Click Counter</h1>
     <p id="countDisplay">Click the button to start counting...</p>
     <button id="clickButton">Click me!</button>
-    <script src="/clickCounter.js"></script>
+    <script>
+         
+ let count = 0; 
+
+ 
+const countDisplay = document.getElementById("countDisplay");
+const clickButton = document.getElementById("clickButton");
+
+
+function updateCountDisplay() {
+    countDisplay.textContent = `Count: ${count}`;
+}
+
+
+clickButton.addEventListener("click", function () {
+    count++; //
+    updateCountDisplay(); 
+});
+    </script>
 </body>
 </html>

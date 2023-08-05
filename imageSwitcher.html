@@ -12,6 +12,26 @@
     <button id="buttonImage1">Show Image 1</button>
     <button id="buttonImage2">Show Image 2</button>
 
-    <script src="/imageSwitcher.js"></script>
+    <script>
+         
+  const imageElement = document.getElementById("imageElement");
+  const buttonImage1 = document.getElementById("buttonImage1");
+  const buttonImage2 = document.getElementById("buttonImage2");
+
+  
+  function showImage1() {
+      imageElement.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrATUI533Z_oaewNp1LXv-gW5Dcpf70y-iUJJBMzsKeNzqc15xCYJwN2OLAIeo8h263a8&usqp=CAU";
+      imageElement.alt = "Image 1";
+  }
+
+  
+  function showImage2() {
+      imageElement.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIM0r7khWAyMYKKt9h-p51ruwSNLLO6xRRuQ&usqp=CAU";
+      imageElement.alt = "Image 2";
+  }
+
+  buttonImage1.addEventListener("click", showImage1);
+  buttonImage2.addEventListener("click", showImage2);
+    </script>
 </body>
 </html>
